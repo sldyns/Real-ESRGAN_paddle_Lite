@@ -1,0 +1,32 @@
+===========================train_params===========================
+model_name:Real_ESRGAN
+python:python
+gpu_list:0
+use-gpu:True
+--epochs:lite_train_lite_infer=1|whole_train_whole_infer=20
+--log_dir:./output/
+--batchSize:lite_train_lite_infer=1|whole_train_whole_infer=4
+--pretrained:null
+train_model_name:net.pdparams
+--data-path:./test_tipc/data/DF2K_HR/
+##
+trainer:norm_train
+norm_train:train.py --yml_path ./test_tipc/configs/Real_ESRGAN/train_realesrgan_x4plus.yml
+##
+===========================eval_params===========================
+eval:tools/predict.py --input ./test_tipc/data/inputs --output ./test_tipc/output/results --model_path ./test_tipc/output/Real_ESRGAN/experiment/train_RealESRGANx4plus_400k_B9G4/models/net_g_10.pdparams --block 9
+##
+===========================infer_params===========================
+--save_inference_dir:./test_tipc/output/
+--pretrained:null
+norm_export:tools/export_model.py --model_path ./test_tipc/output/Real_ESRGAN/experiment/train_RealESRGANx4plus_400k_B9G4/models/net_g_10.pdparams --block 9
+##
+train_model:./test_tipc/output/Real_ESRGAN/experiments/train_RealESRGANx4plus_400k_B9G4/models/net_g_10.pdparams
+infer_export:tools/export_model.py --model_path ./test_tipc/output/Real_ESRGAN/experiment/train_RealESRGANx4plus_400k_B9G4/models/net_g_10.pdparams --block 9
+##
+inference:tools/infer.py
+--use-gpu:True|False
+--batch-size:1
+--model_path
+--input:./test_tipc/data/inputs
+--output:./test_tipc/output/results_infer
