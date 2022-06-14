@@ -34,10 +34,10 @@ Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data
 
 | 原始图像                                         | 争先赛验收可视化要求                                         | 本项目可视化结果                                          | 争先赛验收推理速度要求(s/帧) | 本项目推理速度(s/帧) |
 | ------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------------------- | ---------------------------- | -------------------- |
-| ![test_input1](inputs/00003.png)                 | ![00003_out1](criteria\00003_out1.png)                       | ![00003_out](results\00003_out.png)                       | 0.33                         | 0.20                 |
-| ![test_input1](inputs/0014.jpg)                  | ![0014_out1](criteria\0014_out1.jpg)                         | ![0014_out](results\0014_out.jpg)                         | 0.12                         | 0.06                 |
-| ![img](inputs/0030.jpg)                          | ![0030_out1](criteria\0030_out1.jpg)                         | ![0030_out](results\0030_out.jpg)                         | 0.12                         | 0.07                 |
-| ![ADE_val_00000114](inputs\ADE_val_00000114.jpg) | ![ADE_val_00000114_out1](criteria\ADE_val_00000114_out1.jpg) | ![ADE_val_00000114_out](results\ADE_val_00000114_out.jpg) | 0.14                         | 0.10                 |
+| ![test_input1](inputs/00003.png)                 | ![00003_out1](criteria/00003_out1.png)                       | ![00003_out](results/00003_out.png)                       | 0.33                         | 0.20                 |
+| ![test_input1](inputs/0014.jpg)                  | ![0014_out1](criteria/0014_out1.jpg)                         | ![0014_out](results/0014_out.jpg)                         | 0.12                         | 0.06                 |
+| ![img](inputs/0030.jpg)                          | ![0030_out1](criteria/0030_out1.jpg)                         | ![0030_out](results/0030_out.jpg)                         | 0.12                         | 0.07                 |
+| ![ADE_val_00000114](inputs/ADE_val_00000114.jpg) | ![ADE_val_00000114_out1](criteria/ADE_val_00000114_out1.jpg) | ![ADE_val_00000114_out](results/ADE_val_00000114_out.jpg) | 0.14                         | 0.10                 |
 
 
 ## 3. 数据集、预训练模型、文件结构
